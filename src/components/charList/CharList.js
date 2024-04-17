@@ -30,9 +30,9 @@ const CharList = (props) => {
         }
 
         setCharList(charList => [...charList, ...newCharList]);
-        setNewItemLoading(newItemLoading => false);
+        setNewItemLoading(false);
         setOffset(offset => offset + 9);
-        setCharEnded(charEnded => ended);
+        setCharEnded(ended);
     }
 
     const itemRefs = useRef([]);
@@ -44,7 +44,7 @@ const CharList = (props) => {
     }
 
     function renderItems(arr) {
-        const items =  arr.map((item, i) => {
+        const items = arr.map((item, i) => {
             let imgStyle = {'objectFit' : 'cover'};
             if (item.thumbnail.includes('image_not_available')) {
                 imgStyle = {'objectFit' : 'unset'};
