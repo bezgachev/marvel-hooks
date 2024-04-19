@@ -5,6 +5,9 @@ import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
+
+import {Page404} from '../pages';
+
 import './singleComicPage.scss';
 
 const SingleComicPage = () => {
@@ -27,7 +30,7 @@ const SingleComicPage = () => {
         setComic(comic);
     }
 
-    const errorMessage = error ? <ErrorMessage/> : null;
+    const errorMessage = error ? <Page404 link='/comics' text='Back to comics page'/> : null;
     const spinner = loading ? <Spinner/> : null;
     const content = !(loading || error || !comic) ? <View comic={comic}/> : null;
 

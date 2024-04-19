@@ -1,7 +1,7 @@
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import { Link } from 'react-router-dom';
 
-const Page404 = () => {
+const Page404 = ({link = '/', text = 'Back to main page'}) => {
     return (
         <div>
             <ErrorMessage/>
@@ -11,9 +11,9 @@ const Page404 = () => {
             <Link
             className="button button__main"
             style={{'margin': '30px auto 0 auto', 'maxWidth': '170px', 'display': 'block'}}
-            to="/">
+            to={link}>
                 <div className="inner">
-                    Back to main page
+                    {text}
                 </div>
             </Link>
         </div>
