@@ -16,7 +16,6 @@ const MainPage = () => {
     const onCharSelected = (id) => {
         setChar(id);
     }
-    console.log('render, main page');
 
     return (
         <> 
