@@ -1,17 +1,20 @@
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import { Link } from 'react-router-dom';
-import { Helmet } from "react-helmet";
+import {Helmet, HelmetProvider} from "react-helmet-async";
 
 const Page404 = ({link = '/', text = 'Back to main page'}) => {
     return (
         <div>
-            <Helmet>
-                <meta
-                    name="description"
-                    content="Page doesn't exist"
-                />
-                <title>Page 404</title>
-            </Helmet>
+            <HelmetProvider>
+                <Helmet>
+                    <meta
+                        name="description"
+                        content="Page doesn't exist"
+                    />
+                    <title>Page 404</title>
+                </Helmet>
+            </HelmetProvider>
+
 
             <ErrorMessage/>
 
