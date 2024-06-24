@@ -13,6 +13,7 @@ const RandomChar = () => {
     
     useEffect(() => {
         updateChar();
+        // eslint-disable-next-line
     }, [])
 
     const onCharLoaded = (char) => {
@@ -48,11 +49,13 @@ const RandomChar = () => {
 }
 
 const View = ({data}) => {
+    
     const {name, description, thumbnail, homepage, wiki} = data;
     let imgStyle = {'objectFit' : 'cover'};
     if (thumbnail.includes('image_not_available')) {
         imgStyle = {'objectFit' : 'contain'};
     }
+
     return (
         <div className="randomchar__block">
             <img src={thumbnail} alt="Random character" className="randomchar__img" style={imgStyle}/>

@@ -14,7 +14,6 @@ const CharSearchForm = () => {
 
     const onCharLoaded = (char) => {
         setChar(char);
-        console.log(char);
     }
 
     const updateChar = (name) => {

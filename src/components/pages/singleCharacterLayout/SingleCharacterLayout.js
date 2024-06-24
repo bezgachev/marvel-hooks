@@ -1,4 +1,5 @@
 import {Helmet, HelmetProvider} from "react-helmet-async";
+
 import './singleCharacterLayout.scss';
 
 const SingleCharacterLayout = ({data}) => {

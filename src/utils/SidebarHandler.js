@@ -6,6 +6,7 @@ const SidebarHandler = () => {
         window.addEventListener("scroll", onScroll);
 
         return () => window.removeEventListener("scroll", onScroll);
+        // eslint-disable-next-line
     }, []);
 
     const elementRefs = useRef();

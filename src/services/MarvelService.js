@@ -60,14 +60,16 @@ const useMarvelService = () => {
 		}
     }
 
-    return {clearError,
-            process,
-            setProcess,
-            getAllCharacters,
-            getCharacter,
-            getCharacterByName,
-            getComic,
-            getAllComics}
+    return {
+        clearError,
+        process,
+        setProcess,
+        getAllCharacters,
+        getCharacter,
+        getCharacterByName,
+        getComic,
+        getAllComics
+    }
 
 }
 

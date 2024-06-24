@@ -21,9 +21,9 @@ const Page404 = ({link = '/', text = 'Back to main page'}) => {
             <p style={{'textAlign': 'center', 'fontWeight': 'regular', 'fontSize': '24px'}}>Page doesn't exist</p>
 
             <Link
-            className="button button__main"
-            style={{'margin': '30px auto 0 auto', 'maxWidth': '170px', 'display': 'block'}}
-            to={link}>
+                className="button button__main"
+                style={{'margin': '30px auto 0 auto', 'maxWidth': '170px', 'display': 'block'}}
+                to={link}>
                 <div className="inner">
                     {text}
                 </div>

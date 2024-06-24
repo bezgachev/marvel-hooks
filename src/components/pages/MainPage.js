@@ -30,17 +30,16 @@ const MainPage = () => {
                 </Helmet>
             </HelmetProvider>
 
-            
             <ErrorBoundary>
                 <RandomChar/>
             </ErrorBoundary>
             <div className="char__content">
                 <ErrorBoundary>
-                    <CharList onCharSelected={onCharSelected} />
+                    <CharList onCharSelected={onCharSelected}/>
                 </ErrorBoundary>
                 <div className="char__sidebar" ref={elementRefs}>
                     <ErrorBoundary>
-                        <CharInfo charId={selectedChar} />
+                        <CharInfo charId={selectedChar}/>
                     </ErrorBoundary>
                     <ErrorBoundary>
                         <CharSearchForm/>
