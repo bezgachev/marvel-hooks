@@ -32,6 +32,7 @@ const CharList = (props) => {
     
     useEffect(() => {
         onRequest(offset, true);
+        // eslint-disable-next-line
     }, [])
 
     const onRequest = (offset, initial) => {
@@ -100,6 +101,7 @@ const CharList = (props) => {
 
     const elements = useMemo(() => {
         return setContent(process, () => renderItems(charList), newItemLoading);
+        // eslint-disable-next-line
     }, [process]);
 
     return (
@@ -108,8 +110,10 @@ const CharList = (props) => {
             <button
                 className="button button__main button__long"
                 disabled={newItemLoading}
-                style={{'display': charEnded || (process === 'error') ? 'none' : 'block'}}
-                onClick={() => onRequest(offset)}
+                style={{'display': charEnded || process === 'error' ? 'none' : 'block'}}
+                onClick={() => {
+                    onRequest(offset);
+                }}
                 >
                 <div className="inner">load more</div>
             </button>

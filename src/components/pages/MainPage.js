@@ -6,12 +6,13 @@ import CharList from "../charList/CharList";
 import CharInfo from "../charInfo/CharInfo";
 import CharSearchForm from "../charSearchForm/CharSearchForm";
 import ErrorBoundary from '../errorBoundary/ErrorBoundary';
+import SidebarHandler from "../../utils/SidebarHandler";
 
 import decoration from '../../resources/img/vision.png';
 
 const MainPage = () => {
-
     const [selectedChar, setChar] = useState(null);
+    const {elementRefs} = SidebarHandler();
 
     const onCharSelected = (id) => {
         setChar(id);
@@ -35,11 +36,11 @@ const MainPage = () => {
             </ErrorBoundary>
             <div className="char__content">
                 <ErrorBoundary>
-                    <CharList onCharSelected={onCharSelected}/>
+                    <CharList onCharSelected={onCharSelected} />
                 </ErrorBoundary>
-                <div>
+                <div className="char__sidebar" ref={elementRefs}>
                     <ErrorBoundary>
-                        <CharInfo charId={selectedChar}/>
+                        <CharInfo charId={selectedChar} />
                     </ErrorBoundary>
                     <ErrorBoundary>
                         <CharSearchForm/>
